@@ -1,0 +1,163 @@
+<html>
+<head>
+    <title>Student Registration Form</title>
+
+    <style>
+       *{
+        scroll-behavior: smooth;        
+       } 
+       .menubar{ 
+            height: 3%;
+            background-image: url(wave.jpg); 
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0px 10px 0px 10px;
+          
+        }
+        .menu{
+            display: flex;  gap: 40px;
+            justify-content: end; }
+
+        .main{
+           height:75%; margin: 0%;
+           background-image: linear-gradient(to bottom,powderblue, pink);
+            
+        }
+        
+        .image-scroll { width: 100%; overflow: hidden; white-space: nowrap; } 
+        
+        .image-scroll img { width: 150px; height: 150px; margin-right: 10px; display: inline-block; }
+        
+        .maindisp{
+            background-image: url(worldmpa.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .disp {    
+                width: 800px; 
+            margin: 5px auto; 
+            padding: 20px; 
+            background-color: powderblue; 
+            border-radius: 20px;
+            
+
+        }
+        .formreg {
+            padding: 25px; 
+            background-color: white; 
+            border: 2px solid black; 
+            border-radius: 15px;     
+        }
+        
+        label {
+            display: block; 
+            margin-top: 15px;
+        }
+        
+        .inp {
+            width: 100%; 
+            padding: 8px; 
+            margin-top: 5px; 
+            box-sizing: border-box;
+        }
+        
+        input[type="submit"] { 
+            margin-top: 20px; 
+            cursor: pointer; 
+        }
+
+        #message { text-align: center; color: green; font-weight: bold; margin-top: 15px; }
+
+    </style>
+
+</head>
+<body>
+    <h2 style ="margin:0; background-color: aqua; font-style: oblique; color: red;"> <marquee behavior="alternate"> Container Class</marquee></h2>
+
+    <!-- Container One--> 
+    <div style="border:1px solid blue; height: 70PX;    		background-color: aquamarine;"          class="menubar">     
+        
+         <IMG SRC="WEBX.png" WIDHT="250PX" height="50">
+                
+            <div class="menu">|
+                <a href="Home.html">Home</a>|
+                <a href="about.html">About</a>|
+                <a href="#disform">Register</a>|
+                
+            </div>
+    </div>
+
+    <!-- Container Two-->  
+     <div class="Main">     
+
+	        <center><br><b>Types of Soil</b></center>
+
+        <div class="image-scroll"> 
+            <marquee direction="left" scrollamount="5"> 
+                <img src="Alluvial.png"> 
+                <img src="black.png"> 
+                <img src="red.png"> 
+                <img src="laterite.png"> 
+                <img src="desert.png"> 
+                <img src="mountain.png"> 
+                <img src="clay.png"> 
+                <img src="loam.png"> 
+                <img src="sand.png"> 
+                <img src="Gravel.png"> 
+            </marquee> 
+        </div>
+    </div>
+
+    <!-- Container Three Registration Form-->
+    <div class="maindisp">
+        <div class = "disp" id="disform">     
+            <div class="formreg">
+                <h1><center>Registration Form</center></h1>
+                
+                <form onsubmit="registerUser(event)">
+
+                    <label for="name">Enter your Name:</label>
+                    <input class="inp" type="text" id="name" name="name"
+                       placeholder="Enter your name" required>
+
+                    <label for="em">E Mail:</label>
+                    <input class="inp"type="email" placeholder="email"required id="email">
+
+                    <label for="mn">Mobile Number:</label>
+                    <input class="inp"type="number" placeholder="9876543210" required id="mn">
+
+                    
+                    <label for="pw">Password:</label>
+                    <input class="inp" type="password" placeholder="********"required id="pw">
+                
+                    <p style="margin-bottom: 0px;">Gender:</p>
+                    <input type="radio" name="g" value="m"> Male
+                    <input type="radio" name="g" value="f"> Female
+                    <br>
+
+                    <center> <input type="submit" value="Register"> </center>
+
+                </form>
+                <p id="message"></p>
+           
+            </div>
+        </div>
+    </div>
+
+<script>
+     function registerUser(event) 
+     {   
+       
+        event.preventDefault(); 
+               document.getElementById("message").innerHTML = "Registration Successful"; 
+    } 
+
+
+</script>
+
+</body>
+</html>
